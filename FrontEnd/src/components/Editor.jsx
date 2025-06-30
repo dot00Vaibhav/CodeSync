@@ -50,9 +50,9 @@ const Editor = ({socketRef, roomId, onCodeChange}) => {
   useEffect(() => {
 
     if(socketRef.current){
-      socketRef.current.on(ACTIONS.CODE_CHANGE, (code) => {
-        if(code !== null){
-          editorRef.current.setValue(code);
+      socketRef.current.on(ACTIONS.CODE_CHANGE, (data) => { //data is an object
+        if(data.code !== null){
+          editorRef.current.setValue(data.code);
         }
       });
     }
