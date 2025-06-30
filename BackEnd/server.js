@@ -9,7 +9,7 @@ const server = http.createServer(app);
 // Enable CORS for frontend
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173', // or your frontend domain in production
+    origin: 'https://fd-code-sync.vercel.app', // or your frontend domain in production
     methods: ['GET', 'POST'],
     credentials: true
   }
